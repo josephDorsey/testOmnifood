@@ -371,3 +371,73 @@ border-bottom: 2px solid #e67e22
 _WE JUST FINISEHD BUILDING THE FIRST PART OF OUR PROJECT!_
 
 # Section 5: Building the Features Section Part #1
+
+1. What we will learn in this lecture:
+
+   1. How to put content on a website directly from CSS with the after: pseudo-class
+   2. We'll use the fluid grid for the first time
+   3. We'll learn how to use icons
+
+2. Lets create a section with the <section class="section-features">
+
+   1. What is a section?
+      1. in this its just like the header, it's a container so that we can tell this is a section.
+   2. Now lets start with the title, and with the paragraph we will put that in a .row so lets create a <div> tag and give it a <div class="row"> because of course, we want this centered.
+   3. Now lets create a heading here, but now each web page should only have one h1 element so only 1 main heading!
+      1. lets make this an h2 for the rest of the sections
+   4. So now copy the contents of section one and create the corresponding elements to them
+      1. so we want a bigger dash than the - provided in the title, lets use &mdash;
+         1. &mdash; it is special character
+   5. Now lets create a paragraph <p></p> and give a class <p class="long-copy"></p> because it its a long paragraph and copy means for copyright which is like text for websites.
+      1. lets paste the long text in the paragraph
+
+3. So now lets start using the grid like a pro and in order to do that we have to start a new .row and inside of this .row we make a <div> for each col
+
+   1. Now each column needs a col class and this comes here from the grid css files and we dont have to worry about it we just have to .col class
+   2. Now we have four columns so each of those four columns will have this class span-1-of-4 from the grid file
+      1. each column will have a width of 23.8 percent
+   3. So lets create a new heading and since we already made h1 and h2 lets make an h3 and div col for all the headings:
+
+    <div class="row">
+                <div class="col span-1-of-4">
+                    <h3>Up to 365 days/year</h3>
+                    <p>Never cook again! We really mean that. Our subscription plans include up to 365 days/year coverage. You can also choose to order more flexibly if that's your style.</p>
+                </div>
+                <div class="row">
+                <div class="col span-1-of-4">
+                    <h3>Ready in 20 minutes</h3>
+                    <p>You're only twenty minutes away from your delicious and super healthy meals delivered right to your home. We work with the best chefs in each town to ensure that you're 100% happy.</p>
+                </div>
+                <div class="row">
+                <div class="col span-1-of-4">
+                    <h3>100% organic</h3>
+                    <p>All our vegetables are fresh, organic and local. Animals are raised without added hormones or antibiotics. Good for your health, the environment, and it also tastes better!</p>
+                </div>
+                </div>
+                <div class="row">
+                <div class="col span-1-of-4">
+                    <h3>Order anything</h3>
+                    <p>We don't limit your creativity, which means you can order whatever you feel like. You can also choose from our menu containing over 100 delicious meals. It's up to you!</p>
+                </div>
+    </div>
+
+4. Whats missing here? Our icons!! So lets fix that we will use a beautiful icon font called ion icons (ionicons.com)
+
+   1. from the pack we downloaded we have a lot of files but we only need two things
+      1. we need these CSS files and these font files
+      2. So how do we use these icons? We want them right in front of header <h3> elements
+      3. First lets link the css file associated with the icon pack
+
+   <link rel="stylesheet" href="vendors/css/ionicons.min.css" />
+
+5. Lets use the ios themed icons
+   1. so we write <i class=""> to call the icon we want we use its class.
+      1. For the <h3>365 days a year</h3> we want something that represents 365 so we will use the infinity symbol
+         <i class="ion-ios-infinite-outline"></i>
+      2. For the <h3> Ready in 20 minutes</h3> we want maybe something with a watch or a clock
+         1. <i class="ion-ios-stopwatch-outline"></i>
+      3. For the <h3> 100% organic</h3> we want maybe something with a vegetable or healthy food
+         1. <i class="ion-ios-nutrition-outline"></i>
+      4. For the <h3> Order anything </h3> we want maybe something like a shopping cart
+         1. <i class="ion-ios-cart-outline"></i>
+6. Alright so this is our HTML, in the next lecture we will format this so it looks professionally designed,
