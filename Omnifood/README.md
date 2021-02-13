@@ -591,3 +591,33 @@ make a new section for features in CSS
                 .section-features .long-copy {
                     margin-bottom: 30px;
                 }
+
+# Section 5: Building How it Works Section Pt1
+
+What we'll learn in this lecture: - how to draw circles with CSS - a cool technique to make separations between sections - how to incorporate App Store and Play store buttons
+
+First lets start off with making a new section <section class="section-steps"> and copying the information from the clients documents
+-this time we have two columns and not 4
+-in our first column we want our iphone - in our next column we actually want 3 containers which will then contain the number of the step and the corresponding text
+<div class="works-step"> - the numbers themselves will be a div element
+
+            <div class="col span-1-of-2">
+          <div class="works-step">
+            <div>1</div>
+            <p>Choose the subscription plan that best fits your needs and sign up today.</p>
+          </div>
+          <div class="works-step">
+            <div>2</div>
+            <p>Order your delicious meal using our mobile app or website. Or you can even call us!</p>
+          </div>
+          <div class="works-step">
+            <div>3</div>
+            <p>Enjoy your meal after less than 20 minutes. See you the next time!</p>
+          </div>
+
+Now lets add the app store buttons and the buttons are very simple remmber they are just links
+<a href="#" class="btn-app"></a>
+we will add the img inside so the img becomes the button
+<a href="#" class="btn-app"><img src="resources/img/download-app.svg" alt="App store button"></a>
+
+Now we need to format this section.
