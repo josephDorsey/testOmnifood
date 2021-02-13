@@ -545,3 +545,49 @@ _WE JUST FINISEHD BUILDING THE FIRST PART OF OUR PROJECT!_
          1. give it a margin of 0 i know we have it declared earlier in the file with the h1 element with the normalize css file it defines some margin for that element so we have to overwrite that specifically
    6. NOW, lets format the actual image inside of the photo container and the most IMPORTANT thing i have to do is again, width equals 100%
    7. In the next lecture we are going to add transitions to the images in the li elements.
+
+# Section 5: Building the favorite meals section Part 2
+
+Now the first thing we notice and we didn't correct yet is this large distance between these two section which doesn't look natural and thats because it has a big padding that brings it almost half way to the page.
+
+We actually dont want padding in this section because its a different section.
+
+                        .section-meals {
+                        padding: 0;
+                        }
+
+Now lets work on animation, what animation we will be using is that when we hover over one of the images, the image kind of zooms out and also gets brighter
+
+So we are gonna use the property of transform and give it scale of 1.15, this means instead of 100% it will be 115% big - so as you can see now they are bigger than they are supposed to be and you see they even go out of the browser width - lets fix this we dont want them to be bigger than thier container, it kind of overflows? right? - there is a property called overflow, and if we set it to hidden then that overflow will not be visible and you will only see part of the image which is still inside of the container
+
+Now we can use the :hover state pseudo class for everything on .meal-photo img and give it a transform scale value of 1 and now when you hover over the image it zooms out
+
+- there is a little bit of issue with the zoom out because on some photos it shows a white line when the img zooms out - to fix this set it to 1.03 instead
+  We also want to animation this so, how can we do this? - transition: transform 0.5s like we did with our links remember? - this looks so cool now!
+  Now lets take it another step further we want to make the imgs darker but when hovered over it makes them brighter
+  -opacity lets set it to 0.7 which is 70% - so why is it white? because the background color is white, so if we want tho make this darker we need to set the background-color of the img to black. it will make it darker
+
+Now we need to animate the opacity so that when we hover, we also want the opacity to change back to 1 which is 100%
+
+    .meal-photo img {
+    opacity: 0.7;
+    width: 100%;
+    height: auto;
+    transform: scale(1.15);
+    transition: transform 0.5s, opacity 0.5s;
+    }
+
+    .meal-photo img:hover {
+    opacity: 1;
+    transform: scale(1.03);
+    }
+
+in order to animate it we put the opacity 0.5s in the transition property in the .meal-photo img. Mow we should we both of the things animated.
+
+Another thing we could fix on the page since, most of this section is done is that we need to add some space between the paragraph and the icons. Instead of targeting all long copy classes you can specify to just the features section long copy paragraph
+
+make a new section for features in CSS
+
+                .section-features .long-copy {
+                    margin-bottom: 30px;
+                }
