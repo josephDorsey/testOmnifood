@@ -440,4 +440,72 @@ _WE JUST FINISEHD BUILDING THE FIRST PART OF OUR PROJECT!_
          1. <i class="ion-ios-nutrition-outline"></i>
       4. For the <h3> Order anything </h3> we want maybe something like a shopping cart
          1. <i class="ion-ios-cart-outline"></i>
-6. Alright so this is our HTML, in the next lecture we will format this so it looks professionally designed,
+6. Alright so this is our HTML, in the next lecture we will format this so it looks professionally designed.
+
+# Section 5: Building the Features Section Part #2
+
+1.  First thing we are gonna do to work on this is use white space! Do you remember that white space is a very important thing, so let's define white space between the sections for all sections at the same time
+2.  So lets make this code in the reusable components section in our css sheet
+    1. we can use padding to achieve this, normally we would use margin to style, but we are gonna use padding because we will have some sections with background colors and in order to preserve that background color we need to make sure that the space is inside of each of the boxes
+    2. we want a lot of white space so maybe 80px on the top and the bottom, and 0 at left and right so no margin
+3.  Next, we are gonna format the h2 heading here, we want it to look similar to the h1
+
+    1. want it to hasve the same text-transform, letter-spacing, and font-weight
+       h1,
+       h2 {
+       font-weight: 300;
+       text-transform: uppercase;
+       letter-spacing: 1px;
+       }
+
+       h1 {
+       color: #fff;
+       font-size: 240%;
+       margin-top: 0;
+       margin-bottom: 20px;
+       word-spacing: 4px;
+       }
+
+4.  we want h2 to have maybe 180% font-size not so big and a word spacing of 2px. also want to align it inside of the row so lets have the text-align set to center.
+5.  lets add some space between the h2 and its paragraph by giving h2 a margin bottom of 30px;
+6.  Now we want a nice little yellow line between the h2 and the text, and as we were told we are going to use the psuedo class :after
+    1. after is just some stuff that will appear after the H2
+    2. style it like a normal element
+    3. after we specify an after pseudo-class, we have to specify its content
+    4. in this case we dont want anything in it so we put a blank space " ";
+    5. give it a width
+    6. we want to center it so give it a margin of 0 auto;
+    7. need to specify some margin between this and the bottom so give it a margin-top of 30px;
+    8. there is a margin between the h2 and the h2 after block
+7.  So now lets define a nice paragraph style for this remember we used .long-copy
+
+    1. give it a `line-height between 120 and 145%`
+    2. this line is very long another rule of typography was that this line should have at least 2 complete alphabets, and this is way more
+       1. so let's make this paragraph a little less wide
+    3. So the problem is that it will no longer be centered, so a good idea for this problem, is instead of trying to center, we should set margin left to 15%
+       1. WHY 15%? because the total width would be 100 percent so if we want to center it the remaining 30% should be distributed to both sides.
+          1. so 15% left, 15% right, plus the 70% (which is our width) makes 100%
+
+8.  Next lets format the boxes, first thing wrong is the columns are a little too close to each other
+    1. to remedy this lets give some padding here like 1%
+    2. we dont want to change the grid rules that we have for our colummns so we will create a new class and call it box
+       1. <div class="col span-1-of-4 box">
+       2. this box class will go in the reusable code section receives a padding of 1%
+       3. also we are gonna add h3 to the h1, h2 because we want these three attributes to be always the same so we maintain a similar style throughout the webpage for our headers
+          1. font-weight: 300;
+             text-transform: uppercase;
+             letter-spacing: 1px;
+    3. We want h3 to be a little bigger than normal font-size but only slightly bigger so maybe 110% and add some space between h3 and their paragraphs
+    4. So whats the issue now?
+       1. I personally didnt have this issue while making this project, but in the video lecture the letter spacing between the h3 titles were too big and caused them to go down to the next row so in the lecture he took out letter spacing from the big connection of h1,h2,h3 and only added letter spacing to the h1 and h2 specific elements code block
+    5. Whats the issue now? The text is kind of overwhelming
+       1. lets make the text a little bit smaller and raise its line height
+       2. lets target .box p and give them a line-height of 145% and font-size of 90%. (THIS LOOKS SO MUCH BETTER!!!!)
+    6. Next, lets fix the icons and make them a little bit bigger
+       1. to do that we must make a new class for all of those icons
+       2. lets make a class and call it icon-big
+       3. lets put this in its own section of code for the css sheet, put it below paragraphs
+       4. so since icon font is just a font give it a font-size of 300% if its too big we can always reduce it
+          1. display it as a block so it forces a line break
+          2. give it the color orange like our buttons
+          3. give it some margin between icon and heading (margin-bottom);
