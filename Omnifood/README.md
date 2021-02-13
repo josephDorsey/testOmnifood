@@ -509,3 +509,39 @@ _WE JUST FINISEHD BUILDING THE FIRST PART OF OUR PROJECT!_
           1. display it as a block so it forces a line break
           2. give it the color orange like our buttons
           3. give it some margin between icon and heading (margin-bottom);
+
+# Section 5: Building the favorite meals section Part 1
+
+1. What we'll learn in this lecture:
+   1. How to make a grid of beautiful images
+   1. How to make a nice "zoom-in" transition, only using CSS
+   1. A way to make <img> elements darker
+2. Back to our HTML file, how are we gonna build this grid?
+3. FIRST we need to build a new <section> and give it a class of meals <section class="section-meals">
+
+   1. we want two rows with four images in each row
+   1. we will not use the row class here because we dont want a centered row with some images
+      1. we want our images to occupy 100% of the browsers width
+      2. it is actually good practice to use an unordered list <ul></ul> to do that: in fact, two unordered lists
+         1. one for each line
+
+4. Inside of our <li> we will use <figure> its like a container which can contain an image and also a caption for the image, but in this case we will only put the image as the caption may be too much to learn at this moment.
+   1. <figcaption> is what we would use to give figure a caption.
+   1. next we put a <img src=""> inside of the <figure>, and where is our image?
+      1. in the source folder the pictures are in order from 1-8
+      2. give them their alt texts
+5. So lets format the images now because they are just in a straight line lol with CSS
+   1. CREATE a new section in CSS for MEALS\
+   2. remove bullet points with list style: none;
+   3. another thing since we want this to be the entire browser width we give a width of 100%;
+   4. NEXT, format the <li> so target .meals-showcase li
+      1. give them a display: block;
+      2. float them to the left (encourages them to be side by side)
+      3. ANOTHER VERY IMPORTANT THING is their width
+         1. we have 4 li elements and we want them to take up 100% of the page so each <li> needs to be 25% wide;
+   5. NEXT, lets give <figure> a class of meal-photo <figure class="meal-photo"> and give it to all 8 figures
+      1. now lets format .meal-photo and give it a width of 100%.
+      2. NOW, saying that this element with the class "meal-photo" has a width of 100% means just that it has the exact width of its parent, which in this case is .meals-showcase li
+         1. give it a margin of 0 i know we have it declared earlier in the file with the h1 element with the normalize css file it defines some margin for that element so we have to overwrite that specifically
+   6. NOW, lets format the actual image inside of the photo container and the most IMPORTANT thing i have to do is again, width equals 100%
+   7. In the next lecture we are going to add transitions to the images in the li elements.
