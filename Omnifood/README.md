@@ -746,3 +746,52 @@ Next we're going to add the text and other items in a container so make a div cl
 </div>
 
 Now do this for the rest of them with their appropriate icon. In the next lecture we will style this section with CSS. Thats the end of part - 1.
+
+# Section 5: Building the cities section - part 2
+
+LEC
+
+Now formatting this shouldnt be so hard right? Format the images on your own
+
+MY EXAMPLE
+
+we want to target the box class and we want the image to be exactly as wide as the box - give it 100% width; - height will automatically adjust to that with auto - we want a margin to the bottom to give some space between the box and h3
+
+- OK COOL this looks great now lets add some margin between the icon lines
+- if you remember each of those is a Div called city-features give it a margin-bottom of 5px;
+
+_DIFFICULT_
+
+How do we format the icons? How do we make them a little bigger and maybe aligned to one each other and have an orange color
+
+1.  If you remember for the other icons we named the icon-big class, now lets make an icon-small class for the icons
+2.  traverse back to the icons section in the css file
+3.  first lets make them aligned to each other text-align: center, give them display: inline-block, width of 30px and the color we've been using for the rest of the project #e67e22.
+4.  and then if you remember icons are a font so change the size with font-size and make it 120%
+5.  Now you notice that the icons are not quite aligned with the text 1. give it a line-height of 120% 2. give it a vertical-align and set it to middle and maybe that will fix our issue
+6.  The issue is now the icons are further down than the text, how do we fix this?
+
+LEC There are 3 secrets essentially to align text and icons
+line-height: 120%;
+vertical-align: middle;
+margin-top: -2px;
+
+-with margin being negative it does the opposite thing than a positive margin
+margin-top: -5px this will hopefully pull our icons up instead of pushing them down
+
+-lets also give it a margin-right of 10px so the text and icons arent so close together
+
+7. Last thing to do in this section is to turn the twitter handles to links and to style the links with CSS
+   1. give them all a links
+   2. next we want the color of the links to be orange and we want a more beautiful underlining
+      1. lets create a new section called generic links in CSS because we will use these links in more places maybe
+      2. target a:link, a:visited (_a:active wasn't working for some reason?_)
+      3. lets create a new underline using border-bottom 1px solid #e67e22;
+      4. padding-bottom 1px so we have some space between the text and the border
+   3. So now what we want to happen when we hover over a link we want it to become the color of the normal text, which is gray from the html area
+      1. next we want the border to disappear. How do we do that? instead of 0px we make it transparent and makes it a cleaner solution
+      2. we want a nice transition too so we pick transition and select border-bottom and give it 0.2s and color 0.2s as well.
+8. We have an issue now under the google play store and app store where we can an annoying underline whenever we hover over the buttons since they also have the a link
+   1. So now we go back into the how it works section and create some code for btn.app give it the link and visited and then give it a border of 0. Now the border is gone GOOD!
+
+Now we have 5 of our 9 sections complete, we are more than halfway there! Next we have the customer testimonial section.
