@@ -625,7 +625,7 @@ Now we need to format this section.
 
 # Section 5: Building How it Works Section Pt2
 
-lets make a new section in CSS called How it Works
+lets make a new section in CSS called _How it Works_
 
 1. Now lets format the .steps-box
    1. give them a 30px margin-top from h2
