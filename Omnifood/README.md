@@ -823,3 +823,54 @@ I was looking for a quick and easy food delivery service in San Franciso. I trie
 2. Second, theres actually an HTML element that's designed to precisely include quotes into HTML documents. It's called <blockquote></blockquote>. We will use this instead of <p></p> And we have an element to put for the name of the person the quote belongs to this goes inside the <cite> element the img element can go inside the cite element because we want the picture to be shown.
 
 This is the end of this section. Next time we will format this section in the following update.
+
+# Section 5: Building the customer testimonials - part 2
+
+Lets start by building the beautiful background img. The file belongs in our resources/css/img
+
+REMEMBER all background images go right here into this folder
+lets style the .section-testimonials give it the background image, and lets change the linear-gradient because the picture is way too bright;
+
+1. Now lets make all the text inside of this area white give it a color of #fff
+2. Now we are gonna do something with the background images in CSS.
+   1. By giving it a background-attachment of fixed, this allows you to scroll the website and the image will stay the same and not move
+   2. DO THE SAME THING TO THE HEADER
+3. Now lets fix up the <blockquote></blockquote> elements
+   1. first maybe we want some padding because the images are a little too close to each other give it 2%
+   2. it is very custom to have the customer text it italics (Now we can do this only because of our google italic font style at the top of our HTML page)
+   3. give it a line-height of 145%
+4. Now target <cite>
+   1. give it a font-size of 90%
+   2. margin-top 25px;
+   3. give it a display block to force a line break between the text and the img
+5. Now target <cite:img></cite:img>
+   1. veritcal-align the img to the middle
+   2. give it a height of 50px; (maybe thats too big)
+   3. border-radius of 50% because that makes everything round
+   4. give it a margin-right of 10px;
+6. What else is missing here?
+
+   1. We need a big quotation mark, which we can put in the middle of the page. We can add that with the selector class :before because we want it before our text
+   2. _IMPORTANT_ Remember how do we put text on a website? we use the content: "A";
+   3. we give blockquote:before a content and a font-size
+   4. In order to put the quotation marks there is not as easy as it may sound because in order to do that we need to use something called an iso selector
+
+   A. *www.css-tricks.com/snippets/html/glyphs/*
+
+   5. after going to that link we ctrl + F and search for quotation marks to find how to implement it to our page we want left double quotation mark
+   6. we copy the code from
+      EXAMPLE
+      p:before {
+      content:"\201C"} - we copy the \201C part of the code
+
+7. So we need a new line so we need to make blockquote:before a block element
+
+   1. If we want to position this we need to define its top and left attributes because its the easist way to change it with absolute positioning
+   2. Before we make an element absolute positioning we need to make sure that its parent is relative
+      1. What would happen if we didnt do this?
+         1. if we didnt do this blockquote:before would not appear where we want it
+
+8. So after adjusting the blockquote:before we realized it was too close to the text, what can we do to fix this?
+   1. lets try putting the top to -5px maybe and left to -3px
+   2. So now maybe we should give it some space between the line created under the h2 and the block quotes, what do we do?
+      1. In order to have more space for the quotation marks and to make it bigger, set it to 500% and give it a margin-top of 40px
