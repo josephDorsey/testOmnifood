@@ -676,3 +676,73 @@ this will clear the float after an element, now lets add this class to our ul in
 It is _IMPORTANT_ in web design that we want to show that this is a different section so lets give .section-steps a grayish background color.
 -very subtle effect here
 -background-color: #f4f4f4;
+
+# Section 5: Building the Cities Section - Part 1
+
+In this lecture we will learn:
+
+- practice our new skill set
+- how to use small icons aligned with some text
+- how to style generic links
+
+Lets start off with a new section and call it <Section class="cities"> and give it a <div class="row"> and then lets copy the information from the pages section of what our client wants in this area
+
+EXAMPLE
+
+Section 4: Cities
+Title: We're currently in these cities
+
+Lisbon
+1600+ happy eaters
+60+ top chefs
+@omnifood_lx
+
+San Francisco
+3700+ happy eaters
+160+ top chefs
+@omnifood_sf
+
+Berlin
+2300+ happy eaters
+110+ top chefs
+@omnifood_berlin
+
+London
+1200+ happy eaters
+50+ top chefs
+@omnifood_london
+
+MY EXAMPLE attempt
+
+In this I paused the video after the lecturer told us to give it a try ourselves before continuing this next part.
+
+First we created a div row and inputed 4 <div> because there were 4 city columns that we need to create, so we made <div class="col span-1-of-4 box"> and each div had its own img, h3 with the city name, paragraph with a <br> in it with the followers and chefs, and then a link to their twitter handle.
+
+Before we continue, what is needed to be fixed? images we need to style them appropriately and give them some padding from the top h2 because they are way too big and need to be smaller
+
+The LEC attempt
+
+-instead of p with a br in it and a link at the bottom he decided to go with icons for the happy eaters, the chefs, and the usernames
+
+         - <i class="ion-class-person"></i>
+
+Next we're going to add the text and other items in a container so make a div class called city-features and then make 3 seperate divs for eaters, chefs, and twitter handle
+
+<div class="col span-1-of-4 box">
+<img src="/resources/img/lisbon-3.jpg" alt="Lisbon" />
+<h3>Lisbon</h3>
+<div class="city-features">
+<i class="ion-ios-person"></i>
+1600+ happy eaters <br />
+</div>
+<div class="city-features">
+<i class="ion-ios-star"></i>
+60+ top chefs <br />
+</div>
+<div class="city-features">
+<i class="ion-social-twitter"></i>
+@omnifood_lx <br />
+</div>
+</div>
+
+Now do this for the rest of them with their appropriate icon. In the next lecture we will style this section with CSS. Thats the end of part - 1.
