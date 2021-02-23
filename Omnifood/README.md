@@ -795,3 +795,31 @@ margin-top: -5px this will hopefully pull our icons up instead of pushing them d
    1. So now we go back into the how it works section and create some code for btn.app give it the link and visited and then give it a border of 0. Now the border is gone GOOD!
 
 Now we have 5 of our 9 sections complete, we are more than halfway there! Next we have the customer testimonial section.
+
+# Section 5: Building the customer testimonial section - part 1
+
+Once again we will use beautiful imagery to almost make the user feel hungry. Here we have 3 customers side by side and what they have to say. This is a common way of showing customer testimonials.
+
+In this section we will learn:
+
+1. How to create a beautiful background-image effect
+2. How to effectively communicate what customers have to say
+
+EXAMPLE
+
+Section 5: Customer testimonials
+Title: Our customers can't live without us
+
+Omnifood is just awesome! I just launched a startup which leaves me with no time for cooking, so Omnifood is a life-saver. Now that I got used to it, I couldn't live without my daily meals!
+(Alberto Duncan)
+
+Inexpensive, healthy and great-tasting meals, delivered right to my home. We have lots of food delivery here in Lisbon, but no one comes even close to Omifood. Me and my family are so in love!
+(Joana Silva)
+
+I was looking for a quick and easy food delivery service in San Franciso. I tried a lot of them and ended up with Omnifood. Best food delivery service in the Bay Area. Keep up the great work!
+(Milton Chapman)
+
+1. First lets start off with making a row for just our h2 element, and then lets make another row and then another div with col span 1 of 3
+2. Second, theres actually an HTML element that's designed to precisely include quotes into HTML documents. It's called <blockquote></blockquote>. We will use this instead of <p></p> And we have an element to put for the name of the person the quote belongs to this goes inside the <cite> element the img element can go inside the cite element because we want the picture to be shown.
+
+This is the end of this section. Next time we will format this section in the following update.
