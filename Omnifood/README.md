@@ -75,7 +75,7 @@ You should also update your content regularly in order to show your users that y
 
 # Section 5: Building Header Part #1 Notes 2/10/2021 7:06 PM
 
--this link does go anywhere, its a dummy link until you know where you want to reference your link
+-this link does not go anywhere, its a dummy link until you know where you want to reference your link
 <a href="#"></a>
 
 1. first we are going to add the background image to the header. Here the file the project wants us to use is called hero.jpg. Make sure the file is in the img folder of the css folder
@@ -637,12 +637,15 @@ lets make a new section in CSS called How it Works
 Next, we want to format the numbers in the div elements, we want them to be a circle with a number inside and we also want some distance and some space
 -give .works-step a margin-bottom of 50px - and then target the div of .works-step - give it the color orange we have been using, give it a border of 2px solid with the same color, and give it an inline block because that way we can ensure that the element doesnt force a line break so we can be sure that the number will be side by side with the text.
 
-Next, the number is now a square after the formatting but we know how to fix this.  
- - Change the border radius to 50% - give we can now define the height with 50px and width 50px, it has to be as high as it is wide - make the number centered so text-align centered - next we need to add padding 5px and font-size 150% to change the numbers - we also want the paragraph next right next to the numbers so we float left and give it a margin-right of 25px;
+Next, the number is now a square after the formatting but we know how to fix this.
+
+- Change the border radius to 50% - give we can now define the height with 50px and width 50px, it has to be as high as it is wide - make the number centered so text-align centered - next we need to add padding 5px and font-size 150% to change the numbers - we also want the paragraph next right next to the numbers so we float left and give it a margin-right of 25px;
 
 Now, lets make the buttons the same size so we target .btn-app img and give them a height of 50px a width of auto, and margin-right of 10px
 -we also want the buttons more toward the bottom of the phone
+
 EXAMPLE we will use a new selector called :last-of-type
+
 -this will target the last child element of the same type so in this example only the buttons will move down
 .works-step {
 margin-bottom: 50px;
@@ -652,7 +655,10 @@ margin-bottom: 80px;
 }
 -everything else will keep their margin except for this last type it will have 80
 
-What is the issue now? Eeven thought we defined that a section should have 80px padding - we didnt clear our floats
+What is the issue now? Even though we defined that this section should have 80px padding this section did not have the padding when inspected in the Chrome Tools. It actually shows that it has a 0px. This is because - we didn't clear our floats
+
+_Clearing Floats_
+
 We use a very special selector for this task which is very used in web design
 EXAMPLE
 .clearfix {zoom: 1}
@@ -667,4 +673,6 @@ visibility: hidden;
 this will clear the float after an element, now lets add this class to our ul in .meals-showcase
 -WHY? the child elements of this class, which would be <li></li> have the float property and so we say that the parent has this clearfix class and then that float will be cleared right after the ul element
 
-We want to show that this is a different section so lets give .section-steps a grayish background color.
+It is _IMPORTANT_ in web design that we want to show that this is a different section so lets give .section-steps a grayish background color.
+-very subtle effect here
+-background-color: #f4f4f4;
